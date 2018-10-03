@@ -3,6 +3,7 @@
 <html>
    <head>
       <title>change picture</title>
+      <link rel="stylesheet" href="styles.css" />
       <script type = "text/javascript">
           function displayNextImage() {
               x = (x === images.length - 1) ? 0 : x + 1;
@@ -19,7 +20,7 @@
           }
 
           function startTimer() {
-              setInterval(displayNextImage, 300);
+              setInterval(displayNextImage, 1000);
           }
 
           var images = [], x = -1;
@@ -32,10 +33,21 @@
           height: 100vh;
           width: 100%;
         }
+        .footer {
+          text-align: center;
+          font-size: 12px;
+        }
       </style>
    </head>
 
    <body onload = "startTimer()">
+       <header id="header">
+            <nav>
+                <a>HOME</a>
+                <a>ABOUT</a>
+                <a>CONTACT US</a>
+            </nav>
+        </header>
 	
        <img id="img" src="startpicture.jpg"/>
        <button type="button" onclick="displayPreviousImage()">Previous</button>
@@ -44,6 +56,25 @@
        <p>Contributors: </p>
        <p>
            <a href="akshat.html">Akshat Ahuja</a>
+           <a href="mufti.html">Mufti Ismi</a>
+           <a href="sudz.html">Sudarshan Kamath</a>
+       </p>
+
+       <div class="content-page">
+
+                <!-- footer -->
+                <footer class="footer ">
+                  <script>document.write(new Date().getFullYear());</script>
+                </footer>
+
+       </div>
+
        </p> 
+	   <div class="footer">
+		  <p>ALL RIGHTS RESERVED</p>
+	   </div>
+           
+       </p>
+
    </body>
 </html>
